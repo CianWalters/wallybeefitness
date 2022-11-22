@@ -21,7 +21,7 @@ $results = $crud->getSpecialties();
     Contact Number
  -->
 
-    <h1 class="text-center">Registration for IT Conference</h1>
+    <h1 class="text-center" style="font-family:algerian"><em>Wally Bee Fitness Registration</em></h1>
 <form method="post" action="success.php" enctype="multipart/form-data">
   <div class="mb-3">
     <label for="firstname" class="form-label">First Name</label>
@@ -73,7 +73,7 @@ $results = $crud->getSpecialties();
   </div>
 
 <!-- In Bootstrap 5.2 - w-100 is used to stretch button across the page. -->
-  <button type="submit" name="submit" class="btn btn-info w-100">Submit</button>
+  <button type="submit" name="submit" class="btn btn-warning w-100">Submit</button>
 </form>
 
 <br>

@@ -41,7 +41,7 @@
                 </tr>
             </table><br/><br/>
             <!-- In Bootstrap 5.2 - w-100 is used to stretch button across the page. -->
-            <input type="submit" value="Login" class="btn btn-info w-100"><br/><br/><br/>
+            <input type="submit" value="Login" class="btn btn-warning w-100"><br/><br/><br/>
             <a href="#"> Forgot Password </a>
 
 </form><br/><br/><br/><br/>

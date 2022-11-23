@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
     $dob = $_POST['dob'];
     $email = $_POST['email'];
     $contact = $_POST['phone'];
-    $specialty = $_POST['expertise'];
+    $gender = $_POST['sex'];
 
     $orig_file = $_FILES["avatar"]["tmp_name"];
     $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
@@ -26,8 +26,8 @@ if(isset($_POST['submit'])){
     //exit();  //This is used whenever you don't want it to access the database
 
     //Call Function to insert and track if success or not
-    $isSuccess = $crud->insertAttendees($fname, $lname, $dob, $email, $contact, $specialty,$destination);
-    $specialtyName = $crud->getSpecialtyById($specialty);
+    $isSuccess = $crud->insertMembers($fname, $lname, $dob, $email, $contact, $gender,$destination);
+    $genderName = $crud->getGenderById($gender);
 
     if($isSuccess){
         SendEmail::SendMail($email, 'Welcome to IT Conference 2022', 'You have successfully registered for this years\' IT Conference');
@@ -84,7 +84,7 @@ if(isset($_POST['submit'])){
 <?php echo $_POST['firstname'] . ' ' . $_POST['lastname']; ?>
     </h5>
     <h6 class="card-subtitle mb-2 text-muted">
-    <?php echo $specialtyName['name']; ?>
+    <?php echo $genderName['name']; ?>
     </h6>
     <p class="card-text">
         Date of Birth: <?php echo $_POST['dob']; ?>

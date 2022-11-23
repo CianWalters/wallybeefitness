@@ -6,7 +6,7 @@
 require_once 'includes/header.php'; 
 require_once 'db/conn.php';
 
-$results = $crud->getSpecialties();
+$results = $crud->getGenders();
 
 ?>
 
@@ -16,7 +16,7 @@ $results = $crud->getSpecialties();
     First Name
     Last Name
     Date of Birth (Using date picker)
-    Specialty (Database Admin, Software Developer, Web Administrator, Other)
+    Gender (male, female)
     Email Address
     Contact Number
  -->
@@ -40,15 +40,15 @@ $results = $crud->getSpecialties();
 
 <!-- The below taken from bootstrap 4.6 -->
   <div class="form-group">
-    <label for="specialty">Area of Expertise</label>
-    <select class="form-control" id="expertise" name="expertise">
+    <label for="gender">Gender</label>
+    <select class="form-control" id="sex" name="sex">
       <!-- The below are hard coded options that were removed. Hard coding the database admin value as id 1 is not the best way. -->
       <!-- <option value="1">Database Admin</option>
       <option>Software Developer</option>
       <option>Web Administrator</option>
       <option>Other</option> -->
       <?php while($r = $results->fetch(PDO::FETCH_ASSOC)) {?>
-          <option value="<?php echo $r['specialty_id']?>"><?php echo $r['name']; ?></option>
+          <option value="<?php echo $r['gender_id']?>"><?php echo $r['name']; ?></option>
         <?php }?>
 
     </select>

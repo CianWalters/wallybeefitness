@@ -8,11 +8,11 @@
             $this->db = $conn;
         }
         //function to insert a new record into the attendee database
-        public function insertAttendees($fname, $lname, $dob, $email, $contact, $specialty,$avatar_path){
+        public function insertMembers($fname, $lname, $dob, $email, $contact, $gender,$avatar_path){
             try {
                 //define sql statement to be executed
-                $sql = "INSERT INTO attendee (firstname,lastname,dateofbirth,emailaddress,contactnumber,
-                specialty_id,avatar_path) VALUES (:fname,:lname,:dob,:email,:contact,:specialty,:avatar_path)";
+                $sql = "INSERT INTO member (firstname,lastname,dateofbirth,emailaddress,contactnumber,
+                gender_id,avatar_path) VALUES (:fname,:lname,:dob,:email,:contact,:gender,:avatar_path)";
                 //prepare the sql statement for execution
                 $stmt = $this->db->prepare($sql);
                 //bind all placehoders to the actual values
@@ -21,7 +21,7 @@
                 $stmt->bindparam(':dob',$dob);
                 $stmt->bindparam(':email',$email);
                 $stmt->bindparam(':contact',$contact);
-                $stmt->bindparam(':specialty',$specialty);
+                $stmt->bindparam(':gender',$gender);
                 $stmt->bindparam(':avatar_path',$avatar_path);
 
                 //execute statement
@@ -34,10 +34,10 @@
             }
         } 
 
-        public function editAttendee($id, $fname, $lname, $dob, $email, $contact, $specialty){
+        public function editMember($id, $fname, $lname, $dob, $email, $contact, $gender){
         try{
-            $sql = "UPDATE `attendee` SET `firstname`=:fname,`lastname`=:lname,
-            `dateofbirth`=:dob,`emailaddress`=:email,`contactnumber`=:contact,`specialty_id`=:specialty WHERE attendee_id = :id ";
+            $sql = "UPDATE `member` SET `firstname`=:fname,`lastname`=:lname,
+            `dateofbirth`=:dob,`emailaddress`=:email,`contactnumber`=:contact,`gender_id`=:gender WHERE member_id = :id ";
 
             $stmt = $this->db->prepare($sql);
             //bind all placehoders to the actual values
@@ -47,7 +47,7 @@
             $stmt->bindparam(':dob',$dob);
             $stmt->bindparam(':email',$email);
             $stmt->bindparam(':contact',$contact);
-            $stmt->bindparam(':specialty',$specialty);
+            $stmt->bindparam(':gender',$gender);
             //execute statement
             $stmt->execute();
             return true;
@@ -58,9 +58,9 @@
         }
     }
 
-            public function getAttendees(){
+            public function getMembers(){
                 try{
-                    $sql = "SELECT * FROM `attendee` a inner join specialties s on a.specialty_id = s.specialty_id";
+                    $sql = "SELECT * FROM `member` a inner join genders s on a.gender_id = s.gender_id";
                     $result = $this->db->query($sql);
                     return $result;
                 }catch (PDOException $e) {
@@ -71,9 +71,9 @@
 
             }
 
-            public function getAttendeeDetails($id){
+            public function getMemberDetails($id){
                 try{
-                    $sql = "select * from attendee a inner join specialties s on a.specialty_id = s.specialty_id where attendee_id = :id";
+                    $sql = "select * from member a inner join genders s on a.gender_id = s.gender_id where member_id = :id";
                     $stmt = $this->db->prepare($sql);
                     $stmt->bindparam(':id', $id);
                     $stmt->execute();
@@ -85,9 +85,9 @@
                 }
             }
 
-            public function deleteAttendee($id){
+            public function deleteMember($id){
                 try{
-                    $sql = "delete from attendee where attendee_id = :id";
+                    $sql = "delete from member where member_id = :id";
                     $stmt = $this->db->prepare($sql);
                     $stmt->bindparam(':id', $id);
                     $stmt->execute();
@@ -100,9 +100,9 @@
 
             }           
 
-            public function getSpecialties(){
+            public function getGenders(){
                 try{
-                $sql = "SELECT * FROM `specialties`";
+                $sql = "SELECT * FROM `genders`";
                 $result = $this->db->query($sql);
                 return $result;
             }catch (PDOException $e) {
@@ -111,9 +111,9 @@
             }
         }
 
-            public function getSpecialtyById($id){
+            public function getGenderById($id){
                 try{
-                $sql = "SELECT * FROM `specialties` where specialty_id = :id";
+                $sql = "SELECT * FROM `genders` where gender_id = :id";
                 $stmt = $this->db->prepare($sql);
                 $stmt->bindparam(':id', $id);
                 $stmt->execute();

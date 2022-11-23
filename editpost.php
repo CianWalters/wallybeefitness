@@ -10,10 +10,10 @@ if(isset($_GET['submit'])){
     $dob = $_GET['dob'];
     $email = $_GET['email'];
     $contact = $_GET['phone'];
-    $specialty = $_GET['expertise'];
+    $gender = $_GET['sex'];
 
 //Call Crud Function
-    $result = $crud->editAttendee($id, $fname, $lname, $dob, $email, $contact, $specialty);
+    $result = $crud->editMember($id, $fname, $lname, $dob, $email, $contact, $gender);
 
 //Redirect to index.php
     if($result){

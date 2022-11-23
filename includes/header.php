@@ -27,7 +27,7 @@ include_once 'includes/session.php';
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav mr-auto">
       <a class="nav-item nav-link active" href="index.php">Home <span class="sr-only"></span></a>
-      <a class="nav-item nav-link" href="viewrecords.php">View Attendees</a>
+      <a class="nav-item nav-link" href="viewrecords.php">View Members</a>
     </div>
     <!-- ms-auto is used to margin right -->
     <div class="navbar-nav ms-auto">

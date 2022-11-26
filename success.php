@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
     $dob = $_POST['dob'];
     $email = $_POST['email'];
     $contact = $_POST['phone'];
-    $gender = $_POST['sex'];
+    $gender = $_POST['gender'];
 
     $orig_file = $_FILES["avatar"]["tmp_name"];
     $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);

@@ -41,7 +41,7 @@ $results = $crud->getGenders();
 <!-- The below taken from bootstrap 4.6 -->
   <div class="form-group">
     <label for="gender">Gender</label>
-    <select class="form-control" id="sex" name="sex">
+    <select class="form-control" id="gender" name="gender">
       <!-- The below are hard coded options that were removed. Hard coding the database admin value as id 1 is not the best way. -->
       <!-- <option value="1">Database Admin</option>
       <option>Software Developer</option>

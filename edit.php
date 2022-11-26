@@ -34,8 +34,7 @@ else{
  -->
 
     <h1 class="text-center">Edit Record</h1>
-<!-- Definately does not work with method="post". Tried everything-->
-<form method="get" action="editpost.php">
+<form method="post" action="editpost.php">
     <input type="hidden" name="id" value="<?php echo $member['member_id'] ?>" />
   <div class="mb-3">
     <label for="firstname" class="form-label">First Name</label>
@@ -84,7 +83,7 @@ else{
   </div>
 <!-- In Bootstrap 5.2 - w-100 is used to stretch button across the page. -->
   <a href="viewrecords.php" class="btn btn-default">Back to List</a>
-  <button type="submit" name="submit" class="btn btn-success">Save Changes</button>
+  <button type="submit" name="submit" class="btn btn-success w-100">Save Changes</button>
 
 </form>
 

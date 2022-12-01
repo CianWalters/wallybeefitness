@@ -8,12 +8,13 @@ if(isset($_POST['submit'])){
     $fname = $_POST['firstname'];
     $lname = $_POST['lastname'];
     $dob = $_POST['dob'];
-    $email = $_POST['email'];
+  //  $email = $_POST['email'];
     $contact = $_POST['phone'];
     $gender = $_POST['gender'];
 
 //Call Crud Function
-    $result = $crud->editMember($id, $fname, $lname, $dob, $email, $contact, $gender);
+    $result = $crud->editMember($id, $fname, $lname, $dob, $contact, $gender);
+    // Removed from above -  $email,
 
 //Redirect to index.php
     if($result){

@@ -20,19 +20,24 @@ include_once 'includes/session.php';
 </head>
   <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
-  <a class="navbar-brand" href="index.php">Wally Bee Fitness</a>
+  <a class="navbar-brand" href="index.php">WALLY BEE FITNESS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav mr-auto">
       <a class="nav-item nav-link active" href="index.php">Home <span class="sr-only"></span></a>
-      <a class="nav-item nav-link" href="viewrecords.php">View Members</a>
+      <a class="nav-item nav-link active" href="viewrecords.php">View Members</a>
+      <a class="nav-item nav-link active" href="training.php">Training</a>
+      <a class="nav-item nav-link active" href="openinghours.php">Opening Hours</a>
+      <a class="nav-item nav-link active" href="contacts.php">Contacts</a>
+      <a class="nav-item nav-link active" href="aboutus.php">About Us</a>
+
     </div>
     <!-- ms-auto is used to margin right -->
     <div class="navbar-nav ms-auto">
       <?php
-          if(!isset($_SESSION['userid'])){
+          if(!isset($_SESSION['id'])){
       ?>
         <a class="nav-item nav-link" href="login.php">Login <span class="sr-only"></span></a>
       <?php }else { ?>

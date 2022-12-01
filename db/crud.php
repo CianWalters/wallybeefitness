@@ -34,18 +34,17 @@
             }
         } 
 
-        public function editMember($id, $fname, $lname, $dob, $email, $contact, $gender){
+        public function editMember($id, $fname, $lname, $dob, $contact, $gender){
         try{
             $sql = "UPDATE `member` SET `firstname`=:fname,`lastname`=:lname,
-            `dateofbirth`=:dob,`emailaddress`=:email,`contactnumber`=:contact,`gender_id`=:gender WHERE member_id = :id ";
-
+            `dateofbirth`=:dob,`contactnumber`=:contact,`gender_id`=:gender WHERE member_id = :id ";
+            // Removed from above-    `emailaddress`=:email,
             $stmt = $this->db->prepare($sql);
             //bind all placehoders to the actual values
             $stmt->bindparam(':id',$id);
             $stmt->bindparam(':fname',$fname);
             $stmt->bindparam(':lname',$lname);
             $stmt->bindparam(':dob',$dob);
-            $stmt->bindparam(':email',$email);
             $stmt->bindparam(':contact',$contact);
             $stmt->bindparam(':gender',$gender);
             //execute statement

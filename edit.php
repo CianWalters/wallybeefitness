@@ -70,11 +70,11 @@ else{
     </select>
   </div>
 
-  <div class="mb-3">
+  <!-- <div class="mb-3">
     <label for="email" class="form-label">Email address</label>
-    <input type="email" class="form-control" value="<?php echo $member['emailaddress'] ?>"id="email" name="email" aria-describedby="emailHelp">
+    <input type="email" class="form-control" value="<?php //echo $member['emailaddress'] ?>"id="email" name="email" aria-describedby="emailHelp">
     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-  </div>
+  </div> -->
 
   <div class="mb-3">
     <label for="phone" class="form-label">Contact Number</label>

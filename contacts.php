@@ -8,18 +8,20 @@ require_once 'includes/header.php';
 <h1 class="text-center" style="font-family:algerian"><em>CONTACTS</em></h1>
 
 
-<p align="center">
+<h6 align="center">
 Contact us at:<br>
 Telephone: 876-962-1535<br>
 WhatsApp: 876-334-2180<br>
-</p>
+</h6>
 
-<p align="center">
-Follow us on:<br>
-<a href="https://www.instagram.com/">Instagram: wally__bee</a> <br>
-<a href="https://twitter.com/">Twitter: @fitness_wallybee</a> <br>
-YouTube: Wally Bee Fitness<br>
-</p>
+<h6 align="center">
+Follow us on:<br><br>
+<a href="https://www.instagram.com/wally__bee/" target="_blank" class="btn btn-outline-danger">Instagram: wally__bee</a> <br><br>
+<a href="https://twitter.com/" target="_blank" class="btn btn-outline-info">Twitter: @fitness_wallybee</a> <br><br>
+<a href="https://www.youtube.com/channel/UCxq89YNNlZOxQWqUOoBSbVw" target="_blank" class="btn btn-danger">YouTube: @fitness_wallybee</a> <br><br>
+
+
+</h6>
 
 <br>
 <br>
@@ -28,4 +30,6 @@ YouTube: Wally Bee Fitness<br>
 <br>
 
 <?php require_once 'includes/footer.php'; ?>
+
+<!-- <h6> used instead of <p> for readability  -->
 

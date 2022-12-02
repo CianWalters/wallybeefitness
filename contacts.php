@@ -17,7 +17,7 @@ WhatsApp: 876-334-2180<br>
 <h6 align="center">
 Follow us on:<br><br>
 <a href="https://www.instagram.com/wally__bee/" target="_blank" class="btn btn-outline-danger">Instagram: wally__bee</a> <br><br>
-<a href="https://twitter.com/" target="_blank" class="btn btn-outline-info">Twitter: @fitness_wallybee</a> <br><br>
+<a href="https://twitter.com/CianWalters1" target="_blank" class="btn btn-info">Twitter: @fitness_wallybee</a> <br><br>
 <a href="https://www.youtube.com/channel/UCxq89YNNlZOxQWqUOoBSbVw" target="_blank" class="btn btn-danger">YouTube: @fitness_wallybee</a> <br><br>
 
 

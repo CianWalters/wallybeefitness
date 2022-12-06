@@ -9,9 +9,8 @@ require_once 'includes/header.php';
 
 
 <h6 align="center">
-Contact us at:<br>
-Telephone: 876-962-1535<br>
-WhatsApp: 876-334-2180<br>
+Telephone: 876-962-1535<br><br>
+WhatsApp: 876-334-2180<br><br>
 </h6>
 
 <h6 align="center">

@@ -1,17 +1,17 @@
 <?php
-    $host= '127.0.0.1';
-    $db = 'wallybeefitness_db';
-    $user = 'root';
-    $pass = '';
-    $charset = 'utf8mb4';
+    // $host= '127.0.0.1';
+    // $db = 'wallybeefitness_db';
+    // $user = 'root';
+    // $pass = '';
+    // $charset = 'utf8mb4';
 
     //Azure Database connection
 
-    // $host='applied-web.mysql.database.azure.com';
-    // $user='appliedweb_user@applied-web';
-    // $pass='P@ssword1';
-    // $db = 'wallybeefitness_db';
-    // $charset = 'utf8mb4';
+    $host='applied-web.mysql.database.azure.com';
+    $user='appliedweb_user@applied-web';
+    $pass='P@ssword1';
+    $db = 'wallybeefitness_db';
+    $charset = 'utf8mb4';
     
 
     $dsn = "mysql:host=$host;dbname=$db;charset=$charset";

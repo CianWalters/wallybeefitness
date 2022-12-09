@@ -10,7 +10,7 @@
     // $host='applied-web.mysql.database.azure.com';
     // $user='appliedweb_user@applied-web';
     // $pass='P@ssword1';
-    // $db = 'attendance_cian';
+    // $db = 'wallybeefitness_db';
     // $charset = 'utf8mb4';
     
 

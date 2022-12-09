@@ -41,40 +41,6 @@ if(isset($_POST['submit'])){
     }
 ?>
 
-<!-- in line 10. 18rem changed to 25rem to accommodate the email address width -->
-<!-- <div class="card" style="width: 25rem;">
-  <div class="card-body">
-    <h5 class="card-title">
-            <?php //echo $_GET['firstname'] . ' ' . $_GET['lastname']; ?>
-    </h5>
-    <h6 class="card-subtitle mb-2 text-muted">
-    <?php //echo $_GET['expertise']; ?>
-    </h6>
-    <p class="card-text">
-        Date of Birth: <?php //echo $_GET['dob']; ?>
-    </p>
-    <p class="card-text">
-        Email Address: <?php //echo $_GET['email']; ?>
-    </p>
-    <p class="card-text">
-        Contact Number: <?php //echo $_GET['phone']; ?>
-    </p>
-    
-  </div>
-</div>
-
-    <?php
-        //echo $_GET['firstname'];
-       // echo $_GET['lastname'];
-        //echo $_GET['dob'];
-        //echo $_GET['expertise'];
-        //echo $_GET['email'];
-        //echo $_GET['phone'];
-
-    ?>
-<br>
-<br> -->
-
 <!-- in line 45, 18rem changed to 25rem to accommodate the email address width -->
 <img src="<?php echo $destination; ?>"class="rounded-circle" style="width: 20%; height: 20%"/>
 <div class="card" style="width: 25rem;">

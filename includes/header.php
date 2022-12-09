@@ -31,6 +31,7 @@ include_once 'includes/session.php';
       <a class="nav-item nav-link active" href="training.php">Training</a>
       <a class="nav-item nav-link active" href="openinghours.php">Opening Hours</a>
       <a class="nav-item nav-link active" href="contacts.php">Contacts</a>
+      <a class="nav-item nav-link active" href="locations.php">Locations</a>
       <a class="nav-item nav-link active" href="aboutus.php">About Us</a>
 
     </div>

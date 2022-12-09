@@ -11,8 +11,6 @@ $results = $crud->getGenders();
 ?>
 
 <!-- 
-    Reuploaded...
-
     First Name
     Last Name
     Date of Birth (Using date picker)
@@ -42,11 +40,7 @@ $results = $crud->getGenders();
   <div class="form-group">
     <label for="gender">Gender</label>
     <select class="form-control" id="gender" name="gender">
-      <!-- The below are hard coded options that were removed. Hard coding the database admin value as id 1 is not the best way. -->
-      <!-- <option value="1">Database Admin</option>
-      <option>Software Developer</option>
-      <option>Web Administrator</option>
-      <option>Other</option> -->
+  
       <?php while($r = $results->fetch(PDO::FETCH_ASSOC)) {?>
           <option value="<?php echo $r['gender_id']?>"><?php echo $r['name']; ?></option>
         <?php }?>
